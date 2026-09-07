@@ -1,0 +1,1006 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CHAN YI WEI | Computational Data Analytics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Personal portfolio of a Computational Data Analytics student at UTHM." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Professional icon libraries from pfl10.html -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+		<!-- Custom styles for portfolio sections and sticky navigator -->
+		<style>
+			:root {
+				--bg: #f6f8fb;
+				--surface: #ffffff;
+				--surface-2: #eef3f8;
+				--text: #142033;
+				--muted: #657286;
+				--line: #dce4ee;
+				--primary: #2563eb;
+				--primary-dark: #1746a2;
+				--accent: #14b8a6;
+				--dark: #0d1726;
+				--radius: 22px;
+				--shadow: 0 18px 50px rgba(20, 32, 51, .08);
+				--primary-tint: #EFF6FF;
+				--transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+			#wrapper {
+				overflow: visible !important;
+			}
+
+			/* --- STICKY NAVIGATOR --- */
+			#nav {
+				position: sticky !important;
+				top: 0 !important;
+				z-index: 1000 !important;
+				background: #000000 !important;
+				backdrop-filter: blur(12px) !important;
+				-webkit-backdrop-filter: blur(12px) !important;
+				border-bottom: 1px solid rgba(220, 228, 238, 0.2) !important;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+			}
+			#nav .links li a {
+				color: #ffffff !important;
+				transition: color 0.2s ease, background-color 0.2s ease, border-bottom-color 0.2s ease;
+			}
+			#nav .links li.active a {
+				background: #ffffff !important;
+				color: #000000 !important;
+				border-bottom-color: #ffffff !important;
+				border-radius: 4px;
+			}
+			#nav .icons a {
+				color: #ffffff !important;
+            }
+
+			.pfl-section {
+				scroll-margin-top: 75px;
+			}
+
+			.pfl-section {
+				padding: 80px 0;
+				border-bottom: solid 2px var(--line);
+				text-align: left;
+			}
+			.pfl-container {
+				width: 100%;
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 0 20px;
+				box-sizing: border-box;
+			}
+
+			/* HERO */
+			.hero {
+				min-height: auto;
+				display: block;
+				padding: 60px 0 70px;
+				background:
+					radial-gradient(circle at 80% 20%, rgba(37,99,235,.10), transparent 28%),
+					radial-gradient(circle at 15% 80%, rgba(20,184,166,.08), transparent 25%);
+			}
+			.hero-grid {
+				display: grid;
+				grid-template-columns: 1.25fr .75fr;
+				gap: 50px;
+				align-items: center;
+			}
+			.eyebrow {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 8px 13px;
+				border: 1px solid var(--line);
+				background: var(--surface);
+				border-radius: 999px;
+				color: var(--primary);
+				font-size: .82rem;
+				font-weight: 800;
+				margin-bottom: 22px;
+			}
+			.hero h1 {
+				font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+				line-height: 1.05 !important;
+				letter-spacing: -.05em !important;
+				max-width: 750px;
+				text-transform: none !important;
+				margin-bottom: 15px;
+			}
+			.hero h1 .blue { color: var(--primary); }
+			.hero p {
+				color: var(--muted);
+				font-size: 1.05rem;
+				max-width: 680px;
+				margin: 20px 0 26px;
+				text-transform: none;
+			}
+			.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 9px;
+				padding: 13px 22px;
+				border-radius: 12px;
+				font-weight: 800;
+				font-size: .9rem;
+				transition: .2s;
+				border: 1px solid var(--line);
+				text-decoration: none !important;
+			}
+			.btn-primary { background: var(--dark) !important; color: white !important; border-color: var(--dark) !important; }
+			.btn-primary:hover { transform: translateY(-2px); background: var(--primary-dark) !important; }
+			.btn-light { background: white !important; color: var(--text) !important; }
+			.btn-light:hover { transform: translateY(-2px); border-color: var(--primary) !important; color: var(--primary) !important; }
+			.btn-blue {
+				background: var(--primary) !important;
+				color: #FFFFFF !important;
+				border: 1px solid var(--primary) !important;
+			}
+			.btn-blue:hover {
+				background: #1D4ED8 !important;
+				transform: translateY(-2px);
+			}
+
+			.hero-card {
+				background: var(--dark);
+				color: white;
+				padding: 30px;
+				border-radius: 28px;
+				box-shadow: 0 30px 80px rgba(13,23,38,.18);
+				position: relative;
+				overflow: hidden;
+				text-align: left;
+			}
+			.hero-card::after {
+				content: "";
+				position: absolute;
+				width: 190px;
+				height: 190px;
+				border-radius: 50%;
+				right: -140px;
+				top: -60px;
+				background: rgba(37,99,235,.55);
+			}
+			/* 头照样式 */
+			.avatar-img {
+				width: 220px;
+				height: 240px;
+				border-radius: 8px;
+				object-fit: cover;
+				object-position: center top;
+				border: none !important;
+				outline: none !important;
+				box-shadow: none !important;
+				image-rendering: -webkit-optimize-contrast;
+				image-rendering: crisp-edges;
+				margin-bottom: 1rem;
+				background: #eaf0f7;
+			}
+			.hero-card h3 { font-size: 1.3rem; color: #fff; margin: 0; }
+			.hero-card p { color: #aab7c9; margin: 7px 0 0; font-size: 0.95rem; }
+
+			/* HEADINGS & CONTAINERS */
+			.section-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				gap: 30px;
+				margin-bottom: 42px;
+				text-align: left;
+			}
+			.section-kicker {
+				color: var(--primary);
+				font-size: .78rem;
+				font-weight: 900;
+				text-transform: uppercase;
+				letter-spacing: .14em;
+			}
+			.section-title {
+				font-size: clamp(1.8rem, 3.5vw, 2.7rem) !important;
+				letter-spacing: -.05em !important;
+				line-height: 1.1 !important;
+				margin-top: 8px !important;
+				text-transform: none !important;
+			}
+			.section-desc { color: var(--muted); max-width: 560px; margin: 0; font-size: 0.95rem; }
+
+			/* SKILLS */
+			.tech-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+				gap: 16px;
+				margin-bottom: 40px;
+			}
+			.tech-card {
+				padding: 16px 18px;
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				transition: var(--transition);
+				text-align: left;
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				box-shadow: var(--shadow);
+			}
+			.tech-card:hover {
+				border-color: var(--primary);
+				box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.12);
+				transform: translateY(-2px);
+			}
+			.tech-card .tech-icon {
+				width: 44px;
+				height: 44px;
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: var(--surface-2);
+				flex-shrink: 0;
+				font-size: 1.4rem;
+			}
+			.tech-info { flex-grow: 1; }
+			.tech-name { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+			.tech-pill {
+				display: inline-block;
+				font-size: 0.72rem;
+				font-weight: 600;
+				padding: 2px 8px;
+				border-radius: 99px;
+				margin-top: 4px;
+			}
+			.pill-intermediate { background: #DBEAFE; color: #1E40AF; }
+			.pill-basic { background: #F4F4F5; color: #52525B; border: 1px solid #E4E4E7; }
+			.pill-certified { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
+
+			/* LANGUAGES */
+			.languages-wrapper {
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				padding: 32px;
+				box-shadow: var(--shadow);
+				text-align: left;
+			}
+			.language-header-row {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 24px;
+			}
+			.language-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+				gap: 16px;
+			}
+			.language-card {
+				background: var(--surface-2);
+				border: 1px solid var(--line);
+				border-radius: 14px;
+				padding: 18px;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				transition: var(--transition);
+			}
+			.language-card:hover {
+				border-color: var(--primary);
+				background: #FFFFFF;
+				transform: translateY(-2px);
+				box-shadow: 0 8px 16px -6px rgba(0,0,0,0.06);
+			}
+			.lang-top { display: flex; align-items: center; justify-content: space-between; }
+			.lang-name-box { display: flex; align-items: center; gap: 10px; }
+			.lang-flag { font-size: 1.3rem; line-height: 1; }
+			.lang-name { font-weight: 700; font-size: 0.95rem; color: var(--text); }
+			.lang-badge {
+				font-size: 0.7rem;
+				font-weight: 700;
+				padding: 3px 8px;
+				border-radius: 99px;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+			}
+			.badge-native { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+			.badge-proficient { background: #DBEAFE; color: #1E40AF; border: 1px solid #BFDBFE; }
+			.badge-basic { background: #F4F4F5; color: #52525B; border: 1px solid #E4E4E7; }
+			.lang-meter { height: 6px; background: #E4E4E7; border-radius: 99px; overflow: hidden; }
+			.lang-progress { height: 100%; border-radius: 99px; background: var(--primary); }
+
+			/* PROJECTS (100% 原始清晰度 & 提高框架高度) */
+			.pfl-project-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 20px;
+				text-align: left;
+			}
+			.pfl-project {
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: 20px;
+				overflow: hidden;
+				transition: .25s;
+				box-shadow: var(--shadow);
+				display: flex;
+				flex-direction: column;
+			}
+			.pfl-project:hover { transform: translateY(-6px); border-color: #b8c9e8; }
+			
+			.pfl-project-top {
+				height: 200px;
+				padding: 18px;
+				background-size: cover;
+				background-position: center;
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				image-rendering: -webkit-optimize-contrast;
+				image-rendering: crisp-edges;
+			}
+			.pfl-featured .pfl-project-top {
+				height: 240px;
+			}
+			
+			.pfl-project-top > * {
+				position: relative;
+				z-index: 1;
+			}
+			.pfl-project-icon {
+				width: 44px;
+				height: 44px;
+				border-radius: 12px;
+				background: var(--dark);
+				color: white;
+				display: grid;
+				place-items: center;
+				font-size: 1.1rem;
+				margin-bottom: 0;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+			}
+			.pfl-project-body { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
+			.pfl-project h3 { font-size: 1.15rem; line-height: 1.3; margin-bottom: 8px; text-transform: none; }
+			.pfl-project p { color: var(--muted); font-size: .88rem; margin: 0 0 16px; line-height: 1.5; flex-grow: 1; text-transform: none; }
+			.pfl-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+			.pfl-tag {
+				padding: 4px 8px;
+				border: 1px solid var(--line);
+				border-radius: 999px;
+				font-size: .68rem;
+				font-weight: 800;
+				color: #516071;
+				background: white;
+			}
+			.pfl-featured { grid-column: span 2; }
+
+			/* CERTIFICATIONS */
+			.certs-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 20px;
+				margin-bottom: 24px;
+				text-align: left;
+			}
+			.cert-card {
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				box-shadow: var(--shadow);
+				padding: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				transition: var(--transition);
+			}
+			.cert-card:hover {
+				border-color: var(--primary);
+				box-shadow: 0 10px 24px -10px rgba(37, 99, 235, 0.15);
+				transform: translateY(-2px);
+			}
+			.cert-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 14px; }
+			.cert-icon {
+				width: 44px;
+				height: 44px;
+				border-radius: 10px;
+				display: grid;
+				place-items: center;
+				font-size: 1.2rem;
+				flex-shrink: 0;
+			}
+			.cert-title { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+			.cert-meta { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+			.cert-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 20px; text-transform: none; }
+			.highlight-card {
+				background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%);
+				border: 1px solid #BFDBFE;
+				border-radius: var(--radius);
+				padding: 28px;
+				margin-top: 16px;
+				display: flex;
+				align-items: flex-start;
+				gap: 20px;
+				box-shadow: var(--shadow);
+				text-align: left;
+
+				/* 让卡片横跨所有列（对齐到最右侧） */
+				grid-column: 1 / -1; 
+				width: 100%;
+			}
+			.highlight-icon {
+				background: var(--dark);
+				color: white;
+				width: 48px;
+				height: 48px;
+				display: grid;
+				place-items: center;
+				border-radius: 12px;
+				flex-shrink: 0;
+				font-size: 1.2rem;
+			}
+			.highlight-card h3 { font-size: 1.15rem; margin-bottom: 4px; text-transform: none; }
+			.highlight-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.5; margin: 0; text-transform: none; }
+
+			/* TIMELINE */
+			.timeline { position: relative; max-width: 850px; margin: auto; text-align: left; }
+			.timeline::before { content: ""; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+			.timeline-item { position: relative; padding-left: 55px; margin-bottom: 36px; }
+			.timeline-dot {
+				position: absolute; left: 7px; top: 4px; width: 18px; height: 18px; border-radius: 50%;
+				background: white; border: 5px solid var(--primary);
+			}
+			.timeline-item .date { color: var(--primary); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+			.timeline-item h3 { margin: 4px 0 2px; font-size: 1.15rem; text-transform: none; }
+			.timeline-item .sub { color: var(--muted); font-size: 0.92rem; font-weight: 500; margin-bottom: 8px; }
+			.timeline-item ul { padding-left: 18px; color: var(--muted); font-size: 0.9rem; margin-bottom: 0; }
+			.timeline-item ul li { margin-bottom: 6px; }
+
+			/* CONTACT */
+			.contact-block {
+				background: var(--dark);
+				color: white;
+				border-radius: 32px;
+				padding: 50px 40px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 40px;
+				text-align: left;
+			}
+			.contact-block .section-kicker { color: #8fb3ff; }
+			.contact-block h2 { font-size: clamp(2rem, 3.5vw, 3rem) !important; color: white !important; line-height: 1.1 !important; margin: 8px 0 16px !important; text-transform: none !important; }
+			.contact-block p { color: #aab7c9; max-width: 520px; font-size: 0.95rem; text-transform: none; }
+			.pfl-socials { display: flex; gap: 10px; margin-top: 25px; list-style: none; padding-left: 0; }
+			.pfl-social {
+				width: 44px;
+				height: 44px;
+				border: 1px solid rgba(255,255,255,.14);
+				border-radius: 12px;
+				display: grid;
+				place-items: center;
+				color: white !important;
+				transition: .2s;
+				text-decoration: none !important;
+			}
+			.pfl-social:hover { background: white; color: var(--dark) !important; transform: translateY(-3px); }
+			.contact-links-box { display: grid; gap: 12px; align-content: center; }
+			.contact-link-item {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				padding: 16px;
+				border-radius: 15px;
+				border: 1px solid rgba(255,255,255,.1);
+				background: rgba(255,255,255,.04);
+				text-decoration: none !important;
+				color: white !important;
+			}
+			.contact-link-item i { width: 22px; color: #8fb3ff; font-size: 1.1rem; }
+			.contact-link-item small { display: block; color: #8795a8; font-size: .68rem; text-transform: uppercase; }
+			.contact-link-item strong { font-size: .88rem; font-weight: 600; }
+
+			@media (max-width: 980px) {
+				.hero-grid, .contact-block { grid-template-columns: 1fr; }
+				.pfl-project-grid { grid-template-columns: repeat(2, 1fr); }
+				.pfl-featured { grid-column: span 2; }
+			}
+			@media (max-width: 680px) {
+				.pfl-project-grid { grid-template-columns: 1fr; }
+				.pfl-featured { grid-column: span 1; }
+				.contact-block { padding: 30px 20px; }
+				.section-head { flex-direction: column; align-items: flex-start; }
+			}
+
+			.hero-card {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>CHAN YI WEI<br />
+						</h1>
+						<h1> <br />
+						</h1>
+						<p>A <b>Computational Data Analytics</b> student at Universiti Tun Hussein Onn Malaysia (UTHM), <br />
+							actively seeking a Data Analyst Work-Based Learning (WBL) internship placement.<br /> 
+							<a href="https://www.linkedin.com/in/yi-wei-chan-061546377/">@ChanYiWei</a></p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">HOME</a>
+					</header>
+
+				<!-- Nav with Sticky Section Navigator -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="#home" class="scrolly">About</a></li>
+							<li><a href="#skills" class="scrolly">Skills</a></li>
+							<li><a href="#projects" class="scrolly">Projects</a></li>
+							<li><a href="#certifications" class="scrolly">Certifications</a></li>
+							<li><a href="#journey" class="scrolly">Journey</a></li>
+							<li><a href="#contact" class="scrolly">Contact</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/yi-wei-chan-061546377" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.instagram.com/yiwei_0310?stkn=Z3J1NXZibjByajlh" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+							<li><a href="https://wa.me/601110590323" class="icon brands fa-whatsapp" target="_blank"><span class="label">WhatsApp</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- HERO SECTION -->
+						<section class="pfl-section hero" id="home">
+							<div class="pfl-container">
+								<div class="hero-grid">
+									<div>
+										<div class="eyebrow"><i class="fa-solid fa-circle"></i> Actively Seeking Data Analyst Internship</div>
+										<h1>Turning <span class="blue">data</span> into meaningful decisions</h1>
+										<p>
+											Motivated and detail-oriented Honours degree candidate experienced in applying Power BI, Python, R, SAS, SAS Visual Analytics, and SQL through academic projects involving EDA, machine learning, forecasting, and data visualization.
+										</p>
+										<div class="hero-actions">
+											<a class="btn btn-primary scrolly" href="#projects"><i class="fa-solid fa-grid-2"></i> Explore My Work</a>
+											<a class="btn btn-light scrolly" href="https://drive.google.com/file/d/1woT6HvM6VBflVSgOlwIZe10EQIgytmVn/view?usp=sharing"><i class="fa fa-download"></i> View My Resume</a>
+										</div>
+									</div>
+
+									<aside class="hero-card">
+										<img src="images/resumepicture.jpg" alt="Chan Yi Wei" class="avatar-img" />
+										<h3>CHAN YI WEI</h3>
+										<p>Bachelor of Science (Computational Data Analytics) with Honours</p>
+									</aside>
+								</div>
+							</div>
+						</section>
+
+						<!-- SKILLS & LANGUAGES SECTION -->
+						<section class="pfl-section" id="skills">
+							<div class="pfl-container">
+								<div class="section-head">
+									<div>
+										<div class="section-kicker">01 · Toolkit</div>
+										<h2 class="section-title">Technical Skills & Languages</h2>
+									</div>
+									<p class="section-desc">Comprehensive overview of technical applications, programming frameworks and languages.</p>
+								</div>
+								
+								<div class="tech-grid">
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #3776AB; background: #EAF2F8;"><i class="fa-brands fa-python"></i></div>
+										<div class="tech-info"><div class="tech-name">Python</div><span class="tech-pill pill-intermediate">Intermediate</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #2B579A; background: #EAF0F9;"><i class="fa-regular fa-file-word"></i></div>
+										<div class="tech-info"><div class="tech-name">Microsoft Word</div><span class="tech-pill pill-intermediate">Intermediate</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #107C41; background: #E8F5EE;"><i class="fa-regular fa-file-excel"></i></div>
+										<div class="tech-info"><div class="tech-name">Microsoft Excel</div><span class="tech-pill pill-intermediate">Intermediate</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #00C4CC; background: #E6F9FA;"><i class="fa-solid fa-palette"></i></div>
+										<div class="tech-info"><div class="tech-name">Canva</div><span class="tech-pill pill-intermediate">Intermediate</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #10B981; background: #ECFDF5;"><i class="fa-solid fa-certificate"></i></div>
+										<div class="tech-info"><div class="tech-name">SAS Visual Analytics</div><span class="tech-pill pill-certified">Certified</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #0077C8; background: #E5F3FC;"><i class="fa-solid fa-chart-line"></i></div>
+										<div class="tech-info"><div class="tech-name">SAS</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #E6A200; background: #FEF8E7;"><i class="fa-solid fa-chart-column"></i></div>
+										<div class="tech-info"><div class="tech-name">Power BI</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #276DC3; background: #EAF2FB;"><i class="fa-brands fa-r-project"></i></div>
+										<div class="tech-info"><div class="tech-name">R Programming / Shiny</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #336791; background: #EBF2F7;"><i class="fa-solid fa-database"></i></div>
+										<div class="tech-info"><div class="tech-name">SQL</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+									
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #47A248; background: #EDF7EE;"><i class="fa-solid fa-leaf"></i></div>
+										<div class="tech-info"><div class="tech-name">MongoDB</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #C0392B; background: #FBEBE9;"><i class="fa-solid fa-chart-pie"></i></div>
+										<div class="tech-info"><div class="tech-name">SPSS</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+
+									<div class="tech-card">
+										<div class="tech-icon" style="color: #D24726; background: #FBEDE9;"><i class="fa-regular fa-file-powerpoint"></i></div>
+										<div class="tech-info"><div class="tech-name">Microsoft PowerPoint</div><span class="tech-pill pill-basic">Basic</span></div>
+									</div>
+								</div>
+
+								<div class="languages-wrapper">
+									<div class="language-header-row">
+										<div>
+											<h3 style="font-size: 1.2rem; margin-bottom: 2px;">Language Proficiency</h3>
+											
+										</div>
+										<span style="font-size: 1.2rem; color: var(--primary);"><i class="fa-solid fa-globe"></i></span>
+									</div>
+
+									<div class="language-grid">
+										<div class="language-card">
+											<div class="lang-top">
+												<div class="lang-name-box"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></div>
+												<span class="lang-badge badge-native">Native</span>
+											</div>
+											<div class="lang-meter"><div class="lang-progress" style="width: 100%; background: #F59E0B;"></div></div>
+										</div>
+										<div class="language-card">
+											<div class="lang-top">
+												<div class="lang-name-box"><span class="lang-flag">🇲🇾</span><span class="lang-name">Malay</span></div>
+												<span class="lang-badge badge-proficient">Proficient</span>
+											</div>
+											<div class="lang-meter"><div class="lang-progress" style="width: 90%; background: #2563EB;"></div></div>
+										</div>
+										<div class="language-card">
+											<div class="lang-top">
+												<div class="lang-name-box"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></div>
+												<span class="lang-badge badge-proficient">Proficient</span>
+											</div>
+											<div class="lang-meter"><div class="lang-progress" style="width: 90%; background: #2563EB;"></div></div>
+										</div>
+										<div class="language-card">
+											<div class="lang-top">
+												<div class="lang-name-box"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></div>
+												<span class="lang-badge badge-basic">Basic</span>
+											</div>
+											<div class="lang-meter"><div class="lang-progress" style="width: 40%; background: #94A3B8;"></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- PROJECTS SECTION -->
+						<section class="pfl-section" id="projects">
+							<div class="pfl-container">
+								<div class="section-head">
+									<div>
+										<div class="section-kicker">02 · Selected Work</div>
+										<h2 class="section-title">Featured Projects</h2>
+									</div>
+								</div>
+
+								<div class="pfl-project-grid">
+
+									<!-- Project 1 (Featured): Algorithm Arena -->
+									<article class="pfl-project pfl-featured">
+										<div class="pfl-project-top" style="background-image: url('images/Algorithm.png');">
+											<div class="pfl-project-icon"><i class="fa-solid fa-gamepad"></i></div>
+											<span class="pfl-tag">FEATURED · COPYRIGHT REGISTERED</span>
+										</div>
+										<div class="pfl-project-body">
+											<h3>Algorithm Arena (Copyright Registered)</h3>
+											<p>Designed a Python educational game demonstrating sorting and searching algorithms, officially registered with MyIPO.</p>
+											<div class="pfl-tags">
+												<span class="pfl-tag">Python</span><span class="pfl-tag">OOP</span><span class="pfl-tag">Algorithms</span>
+											</div>
+											<a href="https://sites.google.com/uthm.edu.my/thealgorithmarena-algorithmbos/home" target="_blank" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem; margin-top: auto;">
+												View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+											</a>
+										</div>
+									</article>
+
+									<!-- Project 2: UTHM FAST DMS Pocket -->
+									<article class="pfl-project">
+										<div class="pfl-project-top" style="background-image: url('images/Pocket.png');">
+											<div class="pfl-project-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+										</div>
+										<div class="pfl-project-body">
+											<h3>UTHM FAST DMS Pocket</h3>
+											<p>Built a Python GUI application as a digital guide for prospective students joining DMS, FAST, UTHM.</p>
+											<div class="pfl-tags">
+												<span class="pfl-tag">Python</span><span class="pfl-tag">GUI</span><span class="pfl-tag">OOP</span>
+											</div>
+											<a href="https://sites.google.com/view/coding-report/home" target="_blank" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem; margin-top: auto;">
+												View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+											</a>
+										</div>
+									</article>
+
+									<!-- Project 3: Hospital Patient Queue Management -->
+									<article class="pfl-project">
+										<div class="pfl-project-top" style="background-image: url('images/Patient.png');">
+											<div class="pfl-project-icon"><i class="fa-solid fa-hospital"></i></div>
+										</div>
+										<div class="pfl-project-body">
+											<h3>Hospital Patient Queue Management</h3>
+											<p>Built a Python system using Queue, Linked List and Binary Search concepts.</p>
+											<div class="pfl-tags">
+												<span class="pfl-tag">Python</span><span class="pfl-tag">Data Structures</span>
+											</div>
+											<a href="https://hospitalpatientqueuemanagement.lovable.app/" target="_blank" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem; margin-top: auto;">
+												View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+											</a>
+										</div>
+									</article>
+
+									<!-- Project 4: Data-Driven Water Sustainability -->
+									<article class="pfl-project">
+										<div class="pfl-project-top" style="background-image: url('images/Pahangwater.png');">
+											<div class="pfl-project-icon"><i class="fa-solid fa-droplet"></i></div>
+										</div>
+										<div class="pfl-project-body">
+											<h3>Data-Driven Water Sustainability & Intervention Simulation</h3>
+											<p>Developed an interactive dashboard integrating machine learning, clustering, time-series forecasting and capital injection simulation.</p>
+											<div class="pfl-tags">
+												<span class="pfl-tag">Power BI</span><span class="pfl-tag">R</span><span class="pfl-tag">K-Means</span>
+											</div>
+										</div>
+									</article>
+
+									<!-- Project 5: Agricultural Yield Analysis -->
+									<article class="pfl-project">
+										<div class="pfl-project-top" style="background-image: url('images/Rshiny.png');">
+											<div class="pfl-project-icon"><i class="fa-solid fa-seedling"></i></div>
+										</div>
+										<div class="pfl-project-body">
+											<h3>Agricultural Yield Analysis Using R-Shiny</h3>
+											<p>Integrated five analytical modules into a machine learning system for agricultural yield analysis.</p>
+											<div class="pfl-tags">
+												<span class="pfl-tag">R</span><span class="pfl-tag">Shiny</span><span class="pfl-tag">ML</span>
+											</div>
+										</div>
+									</article>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- CERTIFICATIONS SECTION -->
+						<section class="pfl-section" id="certifications">
+							<div class="pfl-container">
+								<div class="section-head">
+									<div>
+										<div class="section-kicker">03 · Credentials</div>
+										<h2 class="section-title">Professional Certifications & Recognition</h2>
+									</div>
+								</div>
+
+								<div class="certs-grid">
+									<div class="cert-card">
+										<div>
+											<div class="cert-header">
+												<div class="cert-icon" style="background: #EFF6FF; color: #2563EB;"><i class="fa-solid fa-certificate"></i></div>
+												<div>
+													<div class="cert-title">SAS Certified Specialist: Visual Business Analytics Using SAS Viya</div>
+													<div class="cert-meta">SAS Institute &bull; July 2026</div>
+												</div>
+											</div>
+										
+										</div>
+										<a href="https://www.credly.com/badges/c404d6ee-4c95-4c19-9d7c-a2297ec149e4/public_url" target="_blank" rel="noopener noreferrer" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem;">
+											Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
+										</a>
+									</div>
+
+									<div class="cert-card">
+										<div>
+											<div class="cert-header">
+												<div class="cert-icon" style="background: #FEF3C7; color: #D97706;"><i class="fa-solid fa-graduation-cap"></i></div>
+												<div>
+													<div class="cert-title">Foundations of Data Science – Google Career Certificate</div>
+													<div class="cert-meta">Google / Coursera &bull; August 2026</div>
+												</div>
+											</div>
+											
+										<a href="https://www.coursera.org/account/accomplishments/verify/6M70JYVVCJDI" target="_blank" rel="noopener noreferrer" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem;">
+											Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
+										</a>
+									</div>
+								</div>
+
+								<div class="highlight-card">
+									<div class="highlight-icon"><i class="fa-solid fa-shield-halved"></i></div>
+									<div>
+										<h3>Co-authored Copyrighted Application (MyIPO)</h3>
+										<p>
+											Successfully co-developed and registered an educational algorithmic game: <strong>"Algorithm Arena: Symbol Sort, Decks Arranging and Finding Word"</strong> with the Intellectual Property Corporation of Malaysia (MyIPO), reference number <strong>CRLY2025J08716</strong>.
+										</p>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- JOURNEY SECTION -->
+						<section class="pfl-section" id="journey">
+							<div class="pfl-container">
+								<div class="section-head">
+									<div>
+										<div class="section-kicker">04 · Timeline</div>
+										<h2 class="section-title">Work Experience & Leadership Journey</h2>
+									</div>
+								</div>
+
+								<div class="timeline">
+									<div class="timeline-item">
+										<div class="timeline-dot"></div>
+										<div class="date">2024</div>
+										<h3>Accounting Clerk & Customer Service</h3>
+										<div class="sub">In Dressing Sdn. Bhd.</div>
+										<ul>
+											<li>Managed daily accounting operations including processing payments and recording financial transactions in strict compliance with company procedures.</li>
+											<li>Handled customer service by answering customer inquiries daily, resolving complaints and processing orders to preserve client satisfaction.</li>
+										</ul>
+									</div>
+
+									<div class="timeline-item">
+										<div class="timeline-dot"></div>
+										<div class="date">2025</div>
+										<h3>University Leadership & Community Initiatives</h3>
+										<div class="sub">Universiti Tun Hussein Onn Malaysia (UTHM)</div>
+										<ul>
+											<li><strong>Treasurer:</strong> LUNOS 2025: Analytics Gala Night (A Journey of Stars).</li>
+											<li><strong>Instructor:</strong> Knowledge Transfer Programme (KTP) <em>"Dari Tangan Ke Skrin: Asas WORD"</em> in Inspirasi Madani: Mencipta Generasi Peduli (UTHM X JPKKP Kampung Sg. Kajang).</li>
+											<li><strong>Committee Member:</strong> National Data Analytics, Statistics, and Mathematics Innovation Community for Success 2025 (N-DATAMATICS 2025).</li>
+											<li><strong>Participant:</strong> Exchange Session with Rikkyo University, Japan.</li>
+										</ul>
+									</div>
+
+									<div class="timeline-item">
+										<div class="timeline-dot"></div>
+										<div class="date">2026</div>
+										<h3>Advanced Certifications & Data Analytics Milestones</h3>
+										<div class="sub">Universiti Tun Hussein Onn Malaysia & Professional Development</div>
+										<ul>
+											<li>Earned the SAS Certified Specialist: Visual Business Analytics Using SAS Viya credential.</li>
+											<li>Advanced application projects focusing on machine learning, predictive modelling and scalable dashboard visualization.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- CONTACT SECTION -->
+						<section class="pfl-section" id="contact" style="border-bottom: none;">
+							<div class="pfl-container">
+								<div class="contact-block">
+									<div>
+										<div class="section-kicker">05 · Contact</div>
+										<h2>Let's turn data into something useful.</h2>
+										<p>
+											I am currently looking for a one-year Work-Based Learning internship
+											starting in February 2027. If you are looking for an enthusiastic
+											data analytics intern, I'd love to connect.
+										</p>
+
+										<ul class="pfl-socials">
+											<li><a class="pfl-social" href="https://www.linkedin.com/in/yi-wei-chan-061546377" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+											<li><a class="pfl-social" href="https://www.instagram.com/yiwei_0310?stkn=Z3J1NXZibjByajlh" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+											<li><a class="pfl-social" href="https://wa.me/601110590323" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+										</ul>
+									</div>
+
+									<div class="contact-links-box">
+										<a class="contact-link-item" href="mailto:ywchan040310@gmail.com">
+											<i class="fa-solid fa-envelope"></i>
+											<div><small>EMAIL</small><strong style="color: #ffffff;">ywchan040310@gmail.com</strong></div>
+										</a>
+										<a class="contact-link-item" href="https://www.linkedin.com/in/yi-wei-chan-061546377" target="_blank">
+											<i class="fa-brands fa-linkedin"></i>
+											<div><small>LINKEDIN</small><strong style="color: #ffffff;">linkedin.com/in/yi-wei-chan-061546377</strong></div>
+										</a>
+										<a class="contact-link-item">
+											<i class="fa-solid fa-phone"></i>
+											<div><small>PHONE</small><strong style="color: #ffffff;">+60 11-1059 0323</strong></div>
+										</a>
+										<div class="contact-link-item">
+											<i class="fa-solid fa-location-dot"></i>
+											<div><small>BASED IN</small><strong style="color: #ffffff;">Malaysia · UTHM</strong></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					</div>
+
+				<!-- Copyright Footer -->
+					<div id="copyright" style="border-top: solid 2px var(--line);">
+						<ul><li>&copy; 2026 CHAN YI WEI</li><li>Computational Data Analytics</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Scrollspy Script -->
+		<script>
+			$(document).ready(function() {
+				var navLinks = $('#nav .links li a');
+				var sections = [];
+
+				navLinks.each(function() {
+					var href = $(this).attr('href');
+					if (href && href.startsWith('#')) {
+						var target = $(href);
+						if (target.length) {
+							sections.push({
+								link: $(this).parent(),
+								target: target
+							});
+						}
+					}
+				});
+
+				$(window).on('scroll', function() {
+					var scrollPos = $(window).scrollTop() + 100;
+
+					for (var i = sections.length - 1; i >= 0; i--) {
+						var section = sections[i];
+						if (scrollPos >= section.target.offset().top) {
+							$('#nav .links li').removeClass('active');
+							section.link.addClass('active');
+							break;
+						}
+					}
+				});
+			});
+		</script>
+
+	</body>
+</html>
